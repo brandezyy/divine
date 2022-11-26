@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^divinearchitecturestudio.com [NC]
+RewriteRule ^(.*)$ http://www.divinearchitecturestudio.com/$1 [L,R=301,NC]
+
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
